@@ -19,7 +19,7 @@ const signUp = () => {
 const GoogleSignUp = () => {
   return (
     <div className="mt-10 flex justify-center w-full">
-      <button className="btn btn-success text-white" onClick={signUp}>
+      <button className="btn btn-neutral text-white" onClick={signUp}>
         Sign up
       </button>
     </div>

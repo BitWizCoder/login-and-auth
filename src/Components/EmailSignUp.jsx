@@ -7,6 +7,7 @@ const EmailSignup = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [authError, setAuthError] = useState("");
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -33,6 +34,7 @@ const EmailSignup = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
+        setAuthError(errorMessage);
       });
   };
 
@@ -58,7 +60,7 @@ const EmailSignup = () => {
           value={password}
         />
 
-        <button className="btn btn-success text-white" type="submit">
+        <button className="btn btn-neutral" type="submit">
           Sign Up
         </button>
       </form>
