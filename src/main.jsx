@@ -8,6 +8,9 @@ import EmailSignup from "./Components/EmailSignUp";
 import GoogleSignUp from "./Components/GoogleSignUp";
 import GithubSignUp from "./Components/GithubSignUp";
 import Home from "./Components/Home";
+import EmailSignIn from "./Components/EmailSignIn";
+import Email from "./Components/Email";
+import ResetPassword from "./Components/ResetPassword";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +23,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/email",
+        element: <Email />,
+      },
+      {
+        path: "/emailsignup",
         element: <EmailSignup />,
+      },
+      {
+        path: "/emailsignin",
+        element: <EmailSignIn />,
+      },
+      {
+        path: "/resetpassword",
+        element: <ResetPassword />,
       },
       {
         path: "/google",

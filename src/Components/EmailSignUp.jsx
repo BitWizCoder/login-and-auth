@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 const EmailSignup = () => {
   const auth = getAuth();
@@ -126,19 +127,22 @@ const EmailSignup = () => {
           )}
         </button>
         <div>
-          <label>
+          <label className="select-none">
             <input
               type="checkbox"
               checked={isAgreed}
               onChange={handleCheckboxChange}
-              className="mr-2"
+              className="mr-2 cursor-pointer check-box"
             />
-            I agree to the terms and conditions
           </label>
+          I agree to the terms and conditions
         </div>
         <button className="btn btn-neutral mt-2" type="submit">
           Sign Up
         </button>
+        <h2>
+          Have an account? <Link to={"/emailsignin"}>sign in</Link>{" "}
+        </h2>
         <ToastContainer />
       </form>
     </div>
